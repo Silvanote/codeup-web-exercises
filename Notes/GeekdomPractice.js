@@ -39,6 +39,30 @@
     }
 
     console.log(language(myName));
+    // write a function named squareroot that returns the square root of the input
+
+    function squareroot(input){
+        input = Math.sqrt(input);
+        return input;
+    }
+    console.log(squareroot(16))
+
+// Arrays: know your key words
+// TODO: Create a function that will replace every other letter of a string with a "Z".
+    function replaceWithZ(str) {
+        let text = "";
+        let i = 0;
+        for (i = 0; i < str.length; i++) {
+            if (i % 2 == 1) {
+                text = text + "Z";
+            } else {
+                text = text + str[i];
+            }
+        }
+        return text;
+    }
+    console.log(replaceWithZ("JuanSilva"));
+
 
 
 })()
