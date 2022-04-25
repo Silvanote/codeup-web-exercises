@@ -49,4 +49,8 @@
     planets.sort()
     console.log("Sorting the planets array.");
     console.log(planets);
+
+    let planetsUL = "<ul><li>" +planetsArray.join("</li><li>") + "</li></ul>";
+
+
 })();
