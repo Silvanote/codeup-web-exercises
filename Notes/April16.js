@@ -82,7 +82,7 @@ function isPositive(i){
 }
 
 // Exercise 13
-// Wrtie a function definition named isNegative that takes in a number and return true or False if that number is negative.
+// Write a function definition named isNegative that takes in a number and return true or False if that number is negative.
 function isNegative(i){
     if (i > 0){
         return true;
@@ -90,7 +90,7 @@ function isNegative(i){
     return false
 }
 // Exercise 14
-// Write a function definition named isOdd that takes in a numbrer and returns true or false if that number is odd.
+// Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
 function isOdd (i){
     if (i % 2 !== 0){
         return true;
