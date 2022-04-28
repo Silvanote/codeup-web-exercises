@@ -19,6 +19,7 @@ let animals= {
     x: "cat",
     y: "frog",
     z: "bat"};
+
 function animalList(){
     return [animals.w[0], animals.x[0], animals.y[0],animals.z[0]];
 };
