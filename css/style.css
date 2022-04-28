@@ -2,4 +2,38 @@
 .fancy-header{
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+
+.fancy-subtitle{
+    color: orangered;
+    text-decoration:underline;
+    text-align: left;
+}
+.new-color {
+    background-image:url(../Img/pexels-ragga-muffin-2468773.jpg);
+    background-size: cover;
+}
+li{
+    text-decoration: lawngreen;
+    color: blue
+}
+h3{
+    text-decoration: underline;
+    color: chocolate;
+}
+table{
+    color: aliceblue;
+}
+h4{
+    color: darkorange;
+}
+h5{
+    color: darkred;
+}
+a:hover {
+    color:brown;
+    }
+a:active {
+    color:green;
 }
