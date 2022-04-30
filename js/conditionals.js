@@ -33,7 +33,9 @@ function analyzeColor(color) {
         return ("I don't know anything about " + color);
     }
 }
-// analyzeColor(prompt("test"))
+analyzeColor(prompt("blue"))
+analyzeColor(prompt(red))
+analyzeColor(prompt(purple))
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -164,11 +166,11 @@ console.log(analyzeColor(prompt("enter color:")));
  * HINT: The way we prompt for a value could be improved
  */
 
-function numberGame(){}
-    let userVal = parseFloat(prompt("Please give me a number""))
-    if (isNan(userVal)){
+function numberGame(){
+    let userVal = parseFloat(prompt("Please give me a number("");
+    if (isNan(userVal))
         alert("That's not a number");
-    } else {
+    }else{
         alert("Good choice" + userVal + evenOrOdd(userVal) + "number.");
         alert("Good choice" + userVal + plus100(userval));
         alert("Good choice" + userVal + positiveorNegative((userVal));

@@ -13,17 +13,17 @@
 .new-color {
     background-image:url(../Img/pexels-ragga-muffin-2468773.jpg);
     background-size: cover;
+    font-family: 'Water Brush', cursive;
 }
 li{
-    text-decoration: lawngreen;
-    color: blue
+    color: #55ff00
 }
 h3{
     text-decoration: underline;
     color: chocolate;
 }
 table{
-    color: aliceblue;
+    color: #2777bd;
 }
 h4{
     color: darkorange;
