@@ -1,3 +1,15 @@
+/* BONUS answer
+/*root{*/
+/*    --main-bg-info: #cddeff;
+        --main-text-info: #4a45a1;
+        --text-success: #3c8b5b;
+        --bg-success: #cff3da;
+        --text-warning: #3c8b5b;
+        --bg-warning: #fbfac9;
+        --text-error: #3c8b5b;
+        --bg-error: #fad3d7;
+ */
+
 body, html {
         height: 80%;
         width: 80%;
@@ -8,10 +20,11 @@ body, html {
 .message{
     padding: .5px;
     margin: .5em;
-    border: yellow 5px solid;
+    border: lightgray 5px solid;
     border-radius: 10px;
 }
-
+/*bonus extra portion
+*/
 .message.message-info {
     background-color: lightblue;
     padding: 30px;
