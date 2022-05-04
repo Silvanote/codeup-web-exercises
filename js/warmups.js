@@ -118,31 +118,31 @@
 //
 //     Examples...
 
-let product1 = {
-    name: 'Hammer',
-    priceInCents: 400,
-    description: 'It is a a hammar.',
-    inventory: 25034
-}
-let product2 = {
-    name: 'Computer',
-    priceInCents: 40000,
-    description: 'It is a computer.',
-    inventory: 33000
-}
-let product3 = {
-    name: 'Ruler',
-    priceInCents: 1000,
-    description: 'It is a ruler.',
-    inventory: 2200
-}
-function returnProductEssentialDetails(product) {
-    return {
-        name: product.name,
-        priceInCents: product.priceInCents
-    }
-
-    returnProductEssentialDetails(product1); // returns...
+// let product1 = {
+//     name: 'Hammer',
+//     priceInCents: 400,
+//     description: 'It is a a hammar.',
+//     inventory: 25034
+// }
+// let product2 = {
+//     name: 'Computer',
+//     priceInCents: 40000,
+//     description: 'It is a computer.',
+//     inventory: 33000
+// }
+// let product3 = {
+//     name: 'Ruler',
+//     priceInCents: 1000,
+//     description: 'It is a ruler.',
+//     inventory: 2200
+// }
+// function returnProductEssentialDetails(product) {
+//     return {
+//         name: product.name,
+//         priceInCents: product.priceInCents
+//     }
+//
+//     returnProductEssentialDetails(product1); // returns...
     /*
         {
             name: 'Hammar',
@@ -169,15 +169,15 @@ function returnProductEssentialDetails(product) {
 //
 // Create a function, returnAllProductsEssentialDetails, that takes in an array of product objects and returns an array of product objects containing only the essential details of the product name and price in cents.
 //BONUS Answer
-    let products = [product1, product2, product3];
-
-    function returnAllProductEssentialDetails(products) {
-        let productsOutput = [];
-        products.forEach(function (product) {
-            products.push(returnProductEssentialDetails(product));
-        });
-    }
-
-    return productsOutput;
-}
-console.log(returnProductEssentialDetails(products));
+//     let products = [product1, product2, product3];
+//
+//     function returnAllProductEssentialDetails(products) {
+//         let productsOutput = [];
+//         products.forEach(function (product) {
+//             products.push(returnProductEssentialDetails(product));
+//         });
+//     }
+//
+//     return productsOutput;
+// }
+// console.log(returnProductEssentialDetails(products))
