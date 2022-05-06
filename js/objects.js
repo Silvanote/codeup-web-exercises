@@ -111,7 +111,9 @@ author
     firstName
     lastName
 
+let books = [
 
+]
     /**
      * TODO:
      * Loop through the books array and output the following information about
