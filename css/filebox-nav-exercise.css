@@ -1,19 +1,38 @@
 *{
-    padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+}
+a:hover{
+    color: blue;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 0 .5em;
+    font-family: SansSerif;
+}
+
+nav {
+    background-color: gray;
+    align-items: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.logo{
+    font-size: 3em;
+    margin: auto;
+    padding: .2em 0em
+}
+ul{
     margin: 0;
+    list-style: none;
+    padding-left: 0;
 }
-
-body, html {
-    height: 100%;
-    width: 100%;
-    background-color: lightblue;
-    font-family: Arial, Ubuntu, sans-serif;
-}
-
-form {
-padding: 1em;
-margin: 1em;
-}
-
-
-

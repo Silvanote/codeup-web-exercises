@@ -1,0 +1,26 @@
+.sign-up-option {
+    text-decoration: black;
+}
+.jumbotron{
+    background-image: url(../Img/pizza.png);
+    height: 346px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%
+}
+.display-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%
+}
+.container-fluid {
+    display: flex;
+    justify-content: stretch;
+}
+.nav-link primary-dark{
+}
