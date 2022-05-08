@@ -106,10 +106,35 @@ for(let shoppers1 of shoppers) {
 
     EXAMPLE:
 
-    title
+    title: The DaVinci Code
 author
-    firstName
-    lastName
+    firstName: Dan
+    lastName: Brown
+
+    title: Angels and Demons
+author
+    firstName: Dan
+    lastName: Brown
+
+title: The Corps
+author
+    firstName: Web
+    lastName: Griffin
+
+title: Behind The Lines
+author
+    firstName: Web
+    lastName: Griffin
+
+title: Harry Potter
+author
+    firstName: JK
+    lastName: Rowling
+
+title: Rainbow Six
+author
+    firstName: Tom
+    lastName: Clancy
 
 let books = [
 
