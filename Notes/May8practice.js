@@ -121,7 +121,52 @@ console.log(addTwoNumber("9", "10"));
 
     console.log(example2);
 
-    //OBJECT
-    //Write a function that
+    function addtobeginning(adding){
+        example3.unshift(adding);
+    }
+    addtobeginning("anothernumber");
+
+    console.log(example3);
+
+
+
+    //OBJECTS
+    const superNumber = {value: 5, negPos: "positive", integer: true, favorite: false};
+    const superNumber2 = {value: -42, negPos: "negative", integer: true};
+
+    //Write a function that takes in an object and makes it favorite number > true
+    function makeFavorite(obj){
+        obj.favorite = true;
+        // superNumber.favorite = true;
+    }
+
+    function makechange(obj, num){
+        obj.value = num;
+        // superNumber.favorite = true;
+    }
+    console.log(superNumber);
+    makeFavorite(superNumber);
+    makechange(superNumber, 8778)
+    console.log(superNumber);
+
+
+
+//     let numnum = 72;
+//     let numarray = [45, 34, 9403]
+//     const cars = {
+//        car type: "sedan",
+//           brand: "toyota",
+//          model: "camry",
+//         doors: 4
+// }
+//
+// }
+    // pull two properties from the objects (i.e. value and posNeg)
+function shortNumber(obj){
+    return {value:obj.value, negPos:obj.negPos};
+    }
+console.log(shortNumber(superNumber));
+    console.log(shortNumber(superNumber2));
+
 
 })();
