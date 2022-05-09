@@ -1,30 +1,26 @@
+
 (function() {
     "use strict";
-// Examples
+
     /**
      * TODO:
      * Create an object with firstName and lastName properties that are strings
      * with your first and last name. Store this object in a variable named
-     *
      * `person`.
      *
      * Example:
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-// let person = {
-//         firstName : "Juan",
-//         lastName : "Silva"
-//     }
-//     console.log(person.firstName);
 
-// console.log(person.lastName);
-// another example
-//
-// const person = {};
-    //person.firstName = "Joe";
-    //person.lastName = "Montana";
-    //console.log(person.lastName);
+    const person = {};
+
+    person.firstName = "Jane";
+    person.lastName = "Foster";
+
+    console.log(person.firstName);
+    console.log(person.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -34,16 +30,12 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-// EXAMPLE kamea.age = 8;
 
-//     person.sayHello = "Hello from " + person.firstName + " " + person.lastName;
+    person.sayHello = function() {
+        return "Hello from " + this.firstName + " " + this.lastName +"!";
+    }
 
-// person.age = 45
-
-// console.log(person.sayHello);
-// console.log(person);
-
-    //EXAMPLE
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -59,37 +51,27 @@
      * and console.log the relevant messages for each person
      */
 
-
-    let shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
+    const shoppers = [
+        {name: 'Shopper 1', amount: 180},
+        {name: 'Shopper 2', amount: 250},
+        {name: 'Shopper 3', amount: 320}
     ];
-)
-for(let shoppers1 of shoppers) {
-    if (shoppers.amount > 200){
-    let discount = shoppers.amount * .12
-    let
-        }else
-        let noDiscount = shopper.name + " has no discount because " + shopper.name + " did not reach $200 minimum purchase."
-    {
+
+    const amountToDiscount = 200;
+
+    function hebDisc() {
+        for(let x = 0; x < shoppers.length; x++) {
+            if (shoppers[x].amount <= amountToDiscount) {
+                console.log(shoppers[x].name + " did not qualify for the discount. Their total today is $" + shoppers[x].amount.toFixed(2) + ".");
+            } else {
+                let disc = .12 * shoppers[x].amount;
+                let total = shoppers[x].amount - disc;
+                console.log(shoppers[x].name + " has qualified for a discount of 12%! Original total was $" + shoppers[x].amount.toFixed(2) + ", but they have saved $" + disc.toFixed(2) + " leaving them with a final total of $" + total.toFixed(2) + ".");
             }
         }
-// //EXAMPLE
-//     const shoppers = [
-//         {name: "Bob", amount: 180}
-//         {name: "Henk", amount: 250}
-//         {name: "Alexey", amount: 320}
-//     ];
-//
-// const amountToDiscount = 200
-//
-//     function hebDisc(){
-//     for(let x = 0; x < shoppers.legth; x++){
-//         if (shoppers[x].amount <= amounttoDiscount){
-//             console.log(shoppers[x].name)
-//         }
     }
+
+    hebDisc();
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -104,41 +86,44 @@ for(let shoppers1 of shoppers) {
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    EXAMPLE:
+    const books = [
+        {
+            title: "The Obsession",
+            author: {
+                firstName: "Nora",
+                lastName: "Roberts"
+            }
+        },
+        {
+            title: "Shackelton's Wy",
+            author: {
+                firstName: "Margot",
+                lastName: "Morrell"
+            }
+        },
+        {
+            title: "1992 Information Please Sports Almanac",
+            author: {
+                firstName: "Mike",
+                lastName: "Meserole"
+            }
+        },
+        {
+            title: "Brave new world",
+            author: {
+                firstName: "Aldous",
+                lastName: "Huxley"
+            }
+        },
+        {
+            title: "The Great Gatsby",
+            author: {
+                firstName: "F. Scott",
+                lastName: "Fitzgerald"
+            }
+        }
+    ];
 
-    title: The DaVinci Code
-author
-    firstName: Dan
-    lastName: Brown
-
-    title: Angels and Demons
-author
-    firstName: Dan
-    lastName: Brown
-
-title: The Corps
-author
-    firstName: Web
-    lastName: Griffin
-
-title: Behind The Lines
-author
-    firstName: Web
-    lastName: Griffin
-
-title: Harry Potter
-author
-    firstName: JK
-    lastName: Rowling
-
-title: Rainbow Six
-author
-    firstName: Tom
-    lastName: Clancy
-
-let books = [
-
-]
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -164,11 +149,10 @@ let books = [
      *      ...
      */
 
-//     EXAMPLE: SOLUTION
-//
-// books.forEach(function(book: index){
-//     console.log("Book #" + (index + 1) + "\nTitle: " + book.title + "\nAuthor:" + book.author.firstName + "" + book.author.lastName + "\n/")
-// })
+    let i = 1;
+    books.forEach(function(book) {
+        console.log("Book #" + i++ + "\nTitle: " + book.title + "\nAuthor: " + book.author.firstName + " " + book.author.lastName + "\n//////");
+    });
 
     /**
      * Bonus:
@@ -180,31 +164,54 @@ let books = [
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-//EXAMPLE
-// function createBook(title, author)
-//     let author1 = author.split(" ");
-//     if (author1.length < 2) {
-//         return {
-//             title,
-//             author{
-//                 firstName: "",
-//                 lastName: author1[0]
-//             }
-//         };
-//     }else {
-//         return {
-//             title,
-//             author: {
-//                 firstName: author1[0]
-//                 lastName: author1[1]
-//             }
-//         }
-//     }
-// }
-// let title = prompt("Hey tell myour favorite book's title")
-// let author = prompt("And who wrote that?")
-//
-// let bookFromPrompt = createBook(title, author);
-// console.log(bookFromPrompt);
+
+    function createBook(title, author) {
+        let authorArr = author.split(" ");
+        if (authorArr.length < 2) {
+            return {
+                title,
+                author: {
+                    firstName: "",
+                    lastName: authorArr[0]
+                }
+            };
+        } else {
+            return {
+                title,
+                author: {
+                    firstName: authorArr[0],
+                    lastName: authorArr[1]
+                }
+            }
+        }
+    }
+
+    let title = prompt("Hey tell your favorite book's title!");
+    let author = prompt("And who wrote that?");
+
+    let bookFromPrompt = createBook(title, author);
+    console.log(bookFromPrompt);
+
+    const library = [createBook("Crime and Punishment", "Fyodor Dost"), createBook("The Call of the Wild", "Jack London")];
+
+    function showBookInfo(book) {
+        return "Title: " + book.title + "\nAuthor: " + book.author.firstName + " " + book.author.lastName;
+    }
+
+    function showAllBooksInfo(books) {
+        let count = 1;
+        let str = "";
+        for (let book of books) {
+            str += "Book #" + count++ + "\n" + showBookInfo(book) + "\n";
+        }
+        return str;
+    }
+
+    for (let book of library) {
+        console.log(book);
+    }
+
+    console.log(showAllBooksInfo(books));
+
 
 })();
