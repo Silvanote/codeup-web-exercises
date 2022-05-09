@@ -28,9 +28,9 @@ planetsArray = planetsString.split("|");
 let planetsfunc = planetsArray.join("<br>");
 console.log(planetsfunc);
 
-planetsfunc() + document.body.innerHTML = document.body.innerHTML
+document.body.innerHTML += planetsfunc;
 
     let planetsagain = "<ul><li>" + planetsArray.join("</li></li>") + "</li></ul>";
 
-planetsUL + document.body.innerHTML = ("doesn't work");
+document.body.innerHTML += planetsagain
 })();
