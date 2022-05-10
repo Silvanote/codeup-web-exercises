@@ -167,7 +167,7 @@ console.log(analyzeColor(prompt("enter color:")));
  */
 
 function numberGame(){
-    let userVal = parseFloat(prompt("Please give me a number("");
+    let userVal = parseFloa (prompt("Please give me a number("")));
     if (isNan(userVal))
         alert("That's not a number");
     }else{

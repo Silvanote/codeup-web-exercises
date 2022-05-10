@@ -220,13 +220,24 @@ const hamsters = [
 ];
 
 function tallestobj(obj){
-    let tallest = {heightInMM: 0};
-    for(let hamster of obj) {
-        if (hamster.heightInMM > tallest.heightInMM) {
-            tallest = hamster
+
+// function tallestobj(obj){
+//     let tallest = {heightInMM: 0};
+//     for(let hamster of obj) {
+//         if (hamster.heightInMM > tallest.heightInMM) {
+//             tallest = hamster
+//         }
+//     }
+//     return tallest
+}
+function tallestHampster(arr){
+    let tallest = arr[0];
+    for(let i=1; i < arr.length; i++){
+        if(arr[i].heightInMM > tallest.height.InMM){
+            tallest = arr[i];
         }
     }
-    return tallest
+    return tallest;
 }
 
 console.log(tallestobj(hamsters));
