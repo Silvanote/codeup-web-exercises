@@ -1,0 +1,26 @@
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.greenbar{
+    padding: .5em;
+    background-color: olivedrab;
+}
+
+.next-text{
+    text-align: center;
+    padding: .5em
+}
+@media screen and (max-width: 500px){
+    .contact-info{
+            display: flex;
+        justify-content: center;
+        text-align: center;
+        }
+}
