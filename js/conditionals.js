@@ -26,9 +26,9 @@
 
 function analyzeColor(color) {
     if (color === "blue"){
-        return("blue is the color of the sky");
+        return("blue is like the water");
     }else if (color === "red") {
-        return ("Strawberries are red");
+        return ("Red are eyes with allergies");
     } else {
         return ("I don't know anything about " + color);
     }
