@@ -176,6 +176,16 @@ function numberGame(){
         alert("Good choice" + userVal + positiveorNegative((userVal));
 
     }
+function num() {
+    let user = parseFloat(prompt("Write in a number"));
+    if (isNaN(user)) ;{}
+    alert("This is not a number");
+}else
+{
+    alert("got it" + user + evenorOdd(user) + "number.");
+}
+}
+//still didn't work
 
 function plus100(num) {
     return num + 100;
@@ -188,7 +198,6 @@ function evenOrOdd(num) {
     } else (num === 0){
         return "zero is not even or odd"
     }
-}
 }
 
 function positiveorNegative(num) {

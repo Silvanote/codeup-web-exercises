@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 // // Fizzbuzz warmup. FizzBuzz: write a program that prints the numbers from 1 to 100.  But for multiples of three print "fizz" instead of the number and for the multiples of five print "buzz".  For numbers which are multiples of both three and fix print "fizzbuzz."
 // // My work
 // // let i == "FizzBuzz";
@@ -184,60 +184,113 @@
 
 //9 May 22
 // Write a function that will accept an array of objects and return the tallest object from the array.
-
-const hamsters = [
-    {
-        name: "Hamtaro",
-        heightInMM: 86,
-        fur: ['orange', 'white'],
-        gender: "male",
-        dateOfBirth: "August 6"
-    } , {
-        name: "Bijou",
-        heightInMM: 75,
-        fur: ['white'],
-        gender: "female",
-        dateOfBirth: "July 10"
-    } , {
-        name: "Oxnard",
-        heightInMM: 100,
-        fur: ['grey', 'white'],
-        gender: "male",
-        dateOfBirth: "May 3"
-    } , {
-        name: "Boss",
-        heightInMM: 120,
-        fur: ['brown', 'white'],
-        gender: "male",
-        dateOfBirth: "Spetember 21"
-    } , {
-        name: "Snoozer",
-        heightInMM: 85,
-        fur: ['brown', 'white', "pink"],
-        gender: "male",
-        dateOfBirth: "January 14"
-    }
-];
-
-function tallestobj(obj){
-
+//
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "Spetember 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+//
 // function tallestobj(obj){
-//     let tallest = {heightInMM: 0};
-//     for(let hamster of obj) {
-//         if (hamster.heightInMM > tallest.heightInMM) {
-//             tallest = hamster
+//
+// // function tallestobj(obj){
+// //     let tallest = {heightInMM: 0};
+// //     for(let hamster of obj) {
+// //         if (hamster.heightInMM > tallest.heightInMM) {
+// //             tallest = hamster
+// //         }
+// //     }
+// //     return tallest
+// }
+// function tallestHampster(arr){
+//     let tallest = arr[0];
+//     for(let i=1; i < arr.length; i++){
+//         if(arr[i].heightInMM > tallest.height.InMM){
+//             tallest = arr[i];
 //         }
 //     }
-//     return tallest
-}
-function tallestHampster(arr){
-    let tallest = arr[0];
-    for(let i=1; i < arr.length; i++){
-        if(arr[i].heightInMM > tallest.height.InMM){
-            tallest = arr[i];
-        }
-    }
-    return tallest;
+//     return tallest;
+// }
+//
+// console.log(tallestobj(hamsters));
+
+// 10 May
+// Write a function that will accept an array of objects and return the object from the array that is the most colorful. Test array in Slack.
+// function mostColorfulFor(hamsters){
+// let mostColors = hamsters[0];
+// for (let i = 1; i<hamsters.length; x++){
+//     if(hamsters[x].fur.length > mostColors.fur.length){
+//         mostColors = hamsters[x];
+//     }
+// }
+// return mostColors
+// }
+//
+// //Solution from  10 May:
+// function mostColorful(hamsters){
+//     let mostColors={colors: []};
+//     for(let hamster of hamsters){
+//         if (hamster.fur.length > mostColors.fur.length){
+//             mostColors = hamster;
+//         }
+//     }
+//     return mostColors;
+// }
+// console.log(mostColorful(hamsters));
+
+//May 11
+// Write a function that will accept a string.  It should return an object with the following properties: string, size, contains lettersLetterFromRSTLN, and is one word.
+//
+// const objectsExer = [
+//     {
+//         string: "tacocat",
+//         size: 7,
+//         containsLetterFromRSTLNE: true,
+//         isOneWord: true;
+//     },{
+//         string: "John Jacob",
+//         size: 10,
+//         containsLetterFromRSTLNE: false,
+//         isOneWord: false
+//     },
+// }
+
+function pullLetters (accepts){
+    let obj = {};
+    obj.string = str;
+    obj.size = str.length;
+    obj.isOneWord = str.indexOf(" ") < 0;
+    let lc =
 }
 
-console.log(tallestobj(hamsters));
+//Actual solution
+
+function makeObjectFromString(str){
+    const obj = {};
+    obj.string = str;
+    obj.size = str.length;
+    obj.isOneWord = str.indexOf(" ") < 0;
+    let lc = str.toLocaleString();
+    if (lc.inludes("r") || lc.includes("s") || lc.includes("t") || lc.includes("l") || lc.includes("n")|| lc.includes("e")){
+        obj.containsLetterFromRSTLNE = true;
+    }else {
+    obj.containsLetterFromRSTLNE = false;
+    }
+    return obj;
+}
+console.log(makeObjectFromString("tacocat"));
+    console.log(makeObjectFromString("John Jacob"));
