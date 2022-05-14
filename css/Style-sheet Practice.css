@@ -1,0 +1,12 @@
+.fancy-header{
+    color: mediumvioletred;
+    text-decoration: underline;
+}
+
+.header-2{
+    color: lightseagreen;
+    background: #174ea6;
+}
+.background-image-first {
+    background-image: url(/Img/apple-ipad.jpg);
+}
