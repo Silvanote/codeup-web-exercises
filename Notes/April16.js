@@ -56,14 +56,14 @@ function randomPositiveEvenNumber(){
 //this function generates a random number that is both positive and negative and even
 function randomNegativeEvenNumber() {
     let randomNumber = Math.ceil(Math.random() * -100) - 10;
-    if (randomNumber % 2 ==== 0) {
+    if (randomNumber % 2 === 0) {
     return randomNumber;
     }
 return randomNegativeEvenNumber()
 }
 // Heres another example function definition
 // This plusTwo function takes in a variable and adds the number 2 to it.
-funtion plusTwo(x){
+function plusTwo(x){
     return x + 2;
 }
 // Exercise 11
