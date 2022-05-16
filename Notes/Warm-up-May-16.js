@@ -1,0 +1,1 @@
+//let person = prompt("Please enter a color");
