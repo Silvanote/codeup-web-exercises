@@ -1,0 +1,14 @@
+#submit2{
+    background-color: royalblue;
+    color: antiquewhite;
+}
+#submit{
+    background-color: royalblue;
+    color: antiquewhite;
+}
+
+hr {
+    height: 0px;
+    border: none;
+    border-top: 9px solid green;
+}
