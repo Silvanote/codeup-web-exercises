@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="col-6">' + "<strong>" + coffee.name + "</strong>" + "<span class=\"text-muted\">" + coffee.roast + "</span>" + "</div>";
+    let html = '<div class="col-6">' + '<strong>' + coffee.name + '</strong>' + '<span class=\"text-muted\"> ' + coffee.roast + '</span>' + '</div>';
     return html;
 }
 
@@ -20,7 +20,7 @@ function updateCoffees(e) {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (      (coffee.roast === selectedRoast) || (selectedRoast == "all")        ) {
+        if (coffee.roast === selectedRoast || (selectedRoast == "all")        ) {
             filteredCoffees.push(coffee);
         }
     });
@@ -66,13 +66,19 @@ let coffees = [
 ];
 
 let tbody = document.querySelector('#coffees');
+
 let submitButton = document.querySelector('#submit');
+
 let roastSelection = document.querySelector('#roast-selection');
+
 let inputValue = document.querySelector("#coffee-name");
+
 inputValue.addEventListener("input",updateCoffees2);
 
 tbody.innerHTML = renderCoffees(coffees,"all");
+
 submitButton.addEventListener('click', updateCoffees);
 
 let submitButton2 = document.querySelector("#submit2");
+
 submitButton2.addEventListener("click",updateCoffees3);
