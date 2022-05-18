@@ -1,10 +1,10 @@
 "use strict"
-
+//lists the types of coffee and puts them on col-6(left side), bolds, grabs coffee name and mutes the type of roast associated with the name.
 function renderCoffee(coffee) {
     let html = '<div class="col-6">' + '<strong>' + coffee.name + '</strong>' + '<span class=\"text-muted\"> ' + coffee.roast + '</span>' + '</div>';
     return html;
 }
-
+//all function option
 function renderCoffees(coffees, roastTypes) {
     let html = '';
     if(roastTypes === "all") {
@@ -14,7 +14,7 @@ function renderCoffees(coffees, roastTypes) {
     }
     return html;
 }
-
+//created bucket for filtered coffee by using a for Each loop.  Once user selects the coffee roast type OR "all" then the function is to add via the "push" option and list accordingly.
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
@@ -27,7 +27,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees, "all");
 }
 
-
+//first the inputValue.value identifies the coffee name and then a bucket is created to associate the roast and filters.
 function updateCoffees2(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = inputValue.value;
@@ -39,7 +39,7 @@ function updateCoffees2(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees, "all");
 }
-
+//
 function updateCoffees3(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedName = document.getElementById("coffee-name2").value;
