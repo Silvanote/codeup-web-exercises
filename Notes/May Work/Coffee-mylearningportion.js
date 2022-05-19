@@ -4,7 +4,7 @@ function renderCoffee(coffee) {
     let html = '<div class="col-6">' + '<strong>' + coffee.name + '</strong>' + '<span class=\"text-muted\"> ' + coffee.roast + '</span>' + '</div>';
     return html;
 }
-//all function option
+//all function option created
 function renderCoffees(coffees, roastTypes) {
     let html = '';
     if(roastTypes === "all") {
@@ -20,20 +20,20 @@ function updateCoffees(e) {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || (selectedRoast == "all")        ) {
+        if (coffee.roast === selectedRoast || (selectedRoast == "All-types")        ) {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees, "all");
 }
 
-//first the inputValue.value identifies the coffee name and then a bucket is created to associate the roast and filters.
+//first the inputValue.value identifies the coffee name and then a bucket is created to associate the input typed into the box.
 function updateCoffees2(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    let selectedRoast = inputValue.value;
+    let selectedInput = inputValue.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.toLowerCase().includes(selectedRoast.toLowerCase())){
+        if (coffee.name.toLowerCase().includes(selectedInput.toLowerCase())){
             filteredCoffees.push(coffee);
         }
     });
@@ -66,14 +66,15 @@ let coffees = [
 ];
 
 let tbody = document.querySelector('#coffees');
-
+//grabs the array of coffee and within the object: id, name, and roasts
 let submitButton = document.querySelector('#submit');
-
+//grabs ID "submit" and named submitButton
 let roastSelection = document.querySelector('#roast-selection');
-
+//grabs ID "roast-selection" with the types of roasts under the following values: light, medium, dark, and All
 let inputValue = document.querySelector("#coffee-name");
-
+//grabs ID "coffee-name" from array of coffees
 inputValue.addEventListener("input",updateCoffees2);
+//adds eventListener to inputValue and associates with <input> tag
 
 tbody.innerHTML = renderCoffees(coffees,"all");
 
