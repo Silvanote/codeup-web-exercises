@@ -5,23 +5,64 @@
     <title>Jquery First Exercise</title>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>">
-<script src="/js/intro-to-jquery.js">
-
-</script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
+    $function()
+    {
+        //1. Add Jquery code that will change the background color of a H1 element when clicked.
+        $("h1").click(function () {
+            $("h1").css("background", "skyblue");
+        });
+
+   //2. Make all paragraphs have a font size of 18px when they are double clicked.
+        $("p").dblclick(function(){
+            $('p').css("font-size", "18px");
+        })
+
+        //3. Set all li text color to red when the mouse is hovering; reet to black when it is not.
+        $("li").hover(function() {
+            $(this).css("color", "red");
+        }, function(){
+            $(this).css("color", "blue");
+        })
+        
+        }
+</script>
+<!--<script src="/js/intro-to-jquery.js">-->
+<div class="codeup2">
+
+<p id="paragraph1">Should be in blue box - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi cumque dicta distinctio, doloribus ducimus ea error eveniet facilis fugit illo illum ipsam, quisquam reiciendis sit temporibus tenetur. Cum, porro? </p>
+</div>
+<!--</script>-->
+<!--<script>-->
 
     // <div>
     // $(function () {
     //     alert("The DOM has finished loading!");
     // })
-    // </div>
-    $('li').css('font-size', '20px');
+// </div>-->
+<!--    let change1 = $("#paragraph-one").html();-->
+<!--    alert(change1);-->
+<!--    $("#paragraph-one").css("background color", "gray");-->
+
+<!--    let change2 = $(".codeup2").html();-->
+<!--    alert(change2);-->
+<!--    $(".codeup2").css("border", "1px solid blue");-->
+<!--        $('li').css('font-size', '50px');-->
 </script>
-<!--<script src="/js/intro-to-jquery.js">-->
-<!--</script>-->
 
 <h1 id="First-Title" class="First-class"  > Title of jQuery Exercise</h1>
+<h2 id="codeup">Hello Codeup Example </h2>
+<h1>Example Page</h1>
+<div class="important">
+    <h3>NOTICE</h3>
+    <p>This is an important message!</p>
+</div>
+<div class="not-important">
+    <h2>Lorem Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+</div>
+<p class="important">This is also very important.</p>
 <p id="paragraph-one" class="paragraph-class-one"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores blanditiis culpa, dolor dolorum facere facilis hic in molestiae odio quam recusandae repellat, sint vel, vitae voluptas voluptate voluptatibus voluptatum.    </p>
 <div class="classdiv-one">
 <ul class="startofclasslist">
@@ -30,6 +71,7 @@
     <li>codeup</li>
     <li>Item 4</li>
 </ul>
+    $('.important, p').css('background-color', 'red');
 </div>
 </body>
 
@@ -50,3 +92,4 @@
 
 <!--$("nav>ul li:nth-of-type(3)")".css("color)", "blue").addClass("cool-class")-->
 <!--// document.getEle-->
+
