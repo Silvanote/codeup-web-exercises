@@ -1,0 +1,18 @@
+body{
+    background-color: #C6D8D3;
+    font-family: SansSerif;
+}
+.action-completed{
+}
+.current-lives{
+    font-family: "Arial Black";
+    color: mediumvioletred;
+}
+
+p{
+    font-family: "Courier New";
+    color: #34a853;
+}
+h1{
+    text-align: center;
+}
