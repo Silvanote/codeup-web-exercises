@@ -1,5 +1,12 @@
 "use strict";
 // Your solutions will go here :)
+function makeAllUpper(x){
+    if(typeof x == "string") {
+        return x.toUpperCase();
+    } else {
+        return false;
+    }
+}
 function lowerCase(x){
     if(typeof x === 'string'){
         return x.toLowerCase();
