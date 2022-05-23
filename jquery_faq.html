@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqeury faq</title>
+
+    <style>
+        * {box-sizing: border-box;}
+        .output {
+            font: 1rem 'Fira Sans', sans-serif;}
+        .invisible{
+            color: blue
+        }
+        p,
+        dt {
+            font-weight: bold;}
+        dl,
+        dd {
+            font-size: .9rem;}
+        dd {
+            margin-bottom: 1em;}
+    </style>
+</head>
+<body>
+<p>National Parks List</p>
+<p> 10 FAQs about parks </p>
+<dl>
+    <dt>North Cascades National Park</dt>
+    <dd class="invisible">From old growth forest to deep river valleys to high alpine peaks, the Okanogan-Wenatchee is a wild and diverse place..</dd>
+    <h3>State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <dt>Grand Canyon National Park</dt>
+    <dd class="invisible">On your way to the Grand Canyon, you’ll surely find yourself in or near Arizona’s Kaibab National Forest.</dd>
+
+    <dt>Badlands National Park</dt>
+    <dd class="invisible">Just west of Badlands National Park, the Black Hills National Forest is not lacking for activities. </dd>
+
+    <dt>Great Smoky Mountains National Park</dt>
+    <dd class="invisible">High peaks and dense woodlands await on the Pisgah National Forest.</dd>
+
+    <dt>Rocky Mountain National Park</dt>
+    <dd class="invisible">Surrounding the park on almost four sides, the Arapaho-Roosevelt National Forest will not disappoint with Rocky Mountain splendor.</dd>
+
+    <dt>Zion National Park</dt>
+    <dd class="invisible">Red rock formations rival those of the nearby Parks - Zion, Bryce, Arches - and from the top of Powell Point you can see three different states.</dd>
+
+    <dt>Bryce Canyon National Park</dt>
+    <dd class="invisible">As you make your way to the hoodoos of Bryce, take some time to enjoy Utah’s largest natural mountain lake, Fish Lake.</dd>
+
+    <dt>Grand Teton National Park</dt>
+    <dd class="invisible">Bordering both Yellowstone and Grand Teton National Parks, the Shoshone National Forest hosts grizzlies, big horn sheep, wolves, mountain lions, elk and more.</dd>
+
+    <dt>Yellowstone National Park</dt>
+    <dd class="invisible">With six mountain ranges as well as a host of wildlife – including grizzlies and wolves</dd>
+
+    <dt>Yosemite National Park</dt>
+    <dd class="invisible">North of the Park, more than 800 miles of rivers and streams await you on the Stanislaus National Forest.</dd>
+</dl>
+</body>
+<footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+$(function(){
+    $("btn-1").click(function(){
+        $"dd.)toggle
+    })
+    }
+)
+//        $("dd").click(function () {
+//            $(this).toggleClass("dd");
+//        });
+
+$('li').each(function(index) {
+    if (index % 2 !== 0) {
+        $(this).css('background-color', '#FF0');
+    }
+});
+
+    </script>
+</footer>
+</html>
+
+$('li').last().css('background-color', '#FF0');

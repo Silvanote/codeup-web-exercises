@@ -73,23 +73,21 @@
 // <!--    let usernameInput = document.forms.login.question;-->
 // <!--    console.log(usernameInput.value);-->
 // <!--  })();-->
-// TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
-//     let colorChoice = prompt("Please choose a color.");
-//
-// let div1 = document.getElementsByClassName("question")[0];
-//
-// div.style.color=colorChoice;
-// console.log(document.getElementsByClassName("question"))
-//
-// document.getElementById("changeColor").addEventListener("click",function(){
+TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
+    let colorChoice = prompt("Please choose a color.");
+
+let div1 = document.getElementsByClassName("question")[0];
+
+div.style.color=colorChoice;
+console.log(document.getElementsByClassName("question"))
+
+document.getElementById("changeColor").addEventListener("click",function(){
 
 // let color = document.getElementById("color").value;
 // document.body.style.backgroundColor = color;
 // })
 // document.getElementById(0)-use the other solution on bottom instead.  This must be in <SCRIPT> AREA or will only show up as text.
-</script>
-</body>
-</html>
+
 <!--//     DOM Practice Question #1-->
 <!--//     Create an HTML file called dom-practice.html in codeup-web-exercises repos.-->
 <!--// Put a text input on an html page with id of "color"-->
@@ -112,3 +110,73 @@
 <!--  white_check_mark (step 2) and (step 3)-->
 <!--  +1-->
 <!--  raised_hands//-->
+
+<!--// DOM Practice Question #3 Monday 23, 2022-->
+
+<!--// Part 1:-->
+<!--// Every 1 seconds take the H1 tags and change the font size to 10px.-->
+<!--// If its already 10px set it to 20px;-->
+
+<!--// Part 2:-->
+<!--// Add a toggle button with id of "toggleH1"-->
+<!--// use that button to stop and restart the h1 tags from changing size.-->
+
+<!--var text = ["Welcome", "Hi", "Sup dude"];-->
+<!--var counter = 0;-->
+<!--var elem = document.getElementById("changeText");-->
+<!--var inst = setInterval(change, 1000);-->
+
+<!--function change() {-->
+<!--elem.innerHTML = text[counter];-->
+<!--counter++;-->
+<!--if (counter >= text.length) {-->
+<!--counter = 0;-->
+<!--// clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle-->
+<!--}-->
+<!--}-->
+let toggleBtn = document.getElemenstbyID("toggleH1");
+
+function toggleFontSize(){
+let h1s = document.getElementsByTagName("h1"){
+  for(let h1 of h1s){
+  if(h1.style.fontSize !== "10px"){
+  h1.style.fontSize = "10";
+} else{
+    h1.style.fontSize = "20px";
+}
+  }
+
+  let h1IntervalId= setInterval(toggleFontSize, 1000);
+
+  toggleBtn.addEvenListener("click", function(){
+  }
+  }
+  jQuery
+  let toggleBtn = $("#toggleH1");
+
+function toggleFontSize(){
+let h1s = $("h1");
+h1s.each(function(){
+if($(this).css("font-size") !== "10px"){
+  $(this).css("font-size"), "10px");
+} else {
+  $(this).css("font-size", "20px");
+}
+});
+}
+
+let intervalID = setInterval(toggleFontSize, 1000);
+
+toggleBtn.click(function(){
+if(intervalId === null){
+intervalId = setInterval(toggleFontSize, 1000);
+
+}
+}
+})
+}
+
+
+</script>
+</body>
+</html>
