@@ -69,12 +69,24 @@
     <script>
 $(function(){
     $("btn-1").click(function(){
-        $"dd.)toggle
+        $("dd")(toggleClass('invisible');
     })
-    }
 )
 //        $("dd").click(function () {
-//            $(this).toggleClass("dd");
+//            if ($(this).css("background-color") !== "rgba(0,0,0,0){
+//                  ($(this).css("background-color") !== "rgba(0,0,0,0)");
+}else{
+    $(this).css("background-color", "yellow");
+}
+});
+
+$("#btn-2").click(function() {
+    $("ul").each(function() {
+        $(this).children().last().css("background", "yellow");
+    });
+})
+});
+
 //        });
 
 $('li').each(function(index) {
