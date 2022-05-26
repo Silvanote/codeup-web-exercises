@@ -1,58 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>mapbox_maps_api</title>
-    <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0-beta.9/web.js"></script>
-    <script>
-        const accessToken = 'pk.eyJ1Ijoic2lsdmFub3RlIiwiYSI6ImNsM2x5OWdlaDBjY28zZHFnNjMwY2xnOGIifQ.fyQMsedUvvAGcPMtlp2dEw';
-        const script = document.getElementById('search-js');
-        script.onload = function() {
-            mapboxsearch.autofill({
-                accessToken
-            });
-        };
-    </script>
-
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="/css/mapbox.css">
 </head>
 <body>
-<h1>First Exercise</h1>
-
-<!-- The HTML element that serves as the Mapbox container -->
-<div id='map'></div>
+<
+<div id="map"></div>
+<nav id="listing-group" class="listing-group">
+    <input type="checkbox" id="scrollZoom" checked="checked">
+    <label for="scrollZoom">Scroll zoom</label>
+    <input type="checkbox" id="boxZoom" checked="checked">
+    <label for="boxZoom">Box zoom</label>
+    <input type="checkbox" id="dragRotate" checked="checked">
+    <label for="dragRotate">Drag rotate</label>
+    <input type="checkbox" id="dragPan" checked="checked">
+    <label for="dragPan">Drag pan</label>
+    <input type="checkbox" id="keyboard" checked="checked">
+    <label for="keyboard">Keyboard</label>
+    <input type="checkbox" id="doubleClickZoom" checked="checked">
+    <label for="doubleClickZoom">Double click zoom</label>
+    <input type="checkbox" id="touchZoomRotate" checked="checked">
+    <label for="touchZoomRotate">Touch zoom rotate</label>
+</nav>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
 <script>
     mapboxgl.accessToken = MAPBOX_API_KEY;
-    const MAP = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-98.487099, 29.411444], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+        center: [-98.489615, 29.426827], // starting position [lng, lat]
+        zoom: 10 // starting zoom
     });
-<!-- Mapbox JS -->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
-<!-- Custom JS -->
-<script>
-    mapboxgl.accessToken = YOUR_API_TOKEN_HERE;
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-98.4916, 29.4252]
+    let places = [
+        {
+            name: "Bliss",
+            coordinates: [-98.48707, 29.411143],
+            note: "Recommend reservation but def worth the wait."
+        }, {
+            name: "La Maceta Tapatios",
+            coordinates: [-98.47864, 29.43173],
+            note: "My kind of Food Truck!"
+        }, {
+            name: "Ray's Puffy Tacos",
+            coordinates: [-98.53701, 29.42124],
+            note: "Best Puffy Tacos in town, don't be scared of the hood."
+        }
+    ];
+
+    places.forEach(function (place) {
+        let marker = new mapboxgl.Marker({
+            color: 'red', textDecoration: 'bolder'
+        }).setLngLat(place.coordinates)
+        .addTo(map);
+
+
+        let popup = new mapboxgl.Popup()
+            .setHTML( place.name + "<br> " + place.note)
+        marker.setPopup(popup)
+            .addTo(map);
+        //
+        // let note = new mapboxgl.Popup()
+        //     .setHTML(place.note)
+        //     marker.setPopup(popup)
+        //     .addTo(map);
+    })
+    document.getElementById('listing-group').addEventListener('change', (e) => {
+        const handler = e.target.id;
+        if (e.target.checked) {
+            map[handler].enable();
+        } else {
+            map[handler].disable();
+        }
     });
-    const MARKER = new mapboxgl.Marker()
-        .setLngLat([-98.4916, 29.4252])
-        .setDraggable(true)
-        .addTo(MAP);
 
-    // const BLISS POPUP = new mapboxgl.Popup()
-    //     .setLngLat([-98.4916, 29.4252])
-    //     .setHTML("<p>Bliss has blissful food!</p>")
-    //     .addTo(MAP);
+    // const BLISS_POPUP = new mapboxgl.Popup()
+    //     .setLngLag([-98.48707, 29.411143])
+    //     .setLngLat("<p>Need a reservation but def worth it!</p>")
+    //     .addto(map);
+    //
+    // const RAYS_POPUP = new mapboxgl.Popup()
+    //     .setLngLag([-98.47864, 29.43173])
+    //     .setLngLat("<p>Best Puffy Tacos</p>")
+    //     .addto(map);
+    //
+    // const MACETA_POPUP = new mapboxgl.Popup()
+    //     .setLngLag([-98.53701, 29.42124])
+    //     .setLngLat("<p>My kind of Food Truck</p>")
+    //     .addto(map);
 
 </script>
-<script src="js/keys.js"></script>
-<script src="js/geocode-utils.js"></script>
+
 
 </body>
 </html>
