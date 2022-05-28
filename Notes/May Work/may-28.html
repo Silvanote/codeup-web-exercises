@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery practice</title>
+</head>
+<body>
+
+function() {
+let newTime = new Date().getTime();
+let script = document.createElement("SCRIPT");
+
+document.getElementsByTagName("head")[0].appendChild(script);
+
+// Poll for jQuery to come into existance
+var checkReady = function(callback) {
+if (window.jQuery) {
+callback(jQuery);
+}
+else {
+window.setTimeout(function() { checkReady(callback); }, 20);
+}
+};
+
+// Start polling...
+checkReady(function($) {
+$(function() {
+let endingTime = new Date().getTime();
+let tookTime = endingTime - newTime;
+window.alert("jQuery is loaded, after " + tookTime + " milliseconds!");
+});
+});
+})();
+</body>
+</html>
