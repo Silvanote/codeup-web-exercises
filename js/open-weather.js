@@ -1,6 +1,6 @@
 "use strict"
 
-const URL = "https://api.openweathermap.org/data/3.0/onecall";
+const URL = "https://api.openweathermap.org/data/2.5/onecall";
 
 $.get(URL, {
     APPID: OPEN_WEATHER_KEY,
@@ -8,7 +8,7 @@ $.get(URL, {
     lon: -98.489615,
     units: "imperial"
 }).done(function(results){
-    console.log(results)
+    console.log(results.daily[0].temp.max)
 })
 
 //Geocode the string to receive the LAT,LONG to plug in for our OpenWeather API Call.
@@ -24,7 +24,7 @@ geocode("San Antonio, US", MAPBOX_API_KEY).then(function (data) {
         $("#icon").css("background-image", "url('http://openweathermap.org/img/w/" + results.daily[0].weather[0].icon + ".png')")
     })
 })
-
+//
 // $.get(URL, {
 //     APPID: OPEN_WEATHER_KEY,
 //     // utilizing marker from mapbox
@@ -34,5 +34,5 @@ geocode("San Antonio, US", MAPBOX_API_KEY).then(function (data) {
 // }).done(function (results) {
 //     console.log(results)
 // })
-
+//
 // const iconURL = "http://openweathermap.org/img/w/" + iconID + ".png"
