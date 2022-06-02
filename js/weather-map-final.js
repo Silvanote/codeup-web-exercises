@@ -34,8 +34,8 @@ function displayResults(weather){
     let weather_el = document.querySelector('.current .weather');
     weather_el.innterText = weather.weather[0].main;
     
-    let hilow = document.querySelector('.hi-low');
-    hilow.innerText = `${weather.main.temp_min} °F / ${weather.main.temp_max} °`
+    let hilow = document.qu/ erySelector('.hi-low');
+    hilow.innerText = `${weather.main.temp_min}` °F / `${weather.main.temp_max}`°
 }
 
 function dateBuilder(d) {
@@ -48,5 +48,5 @@ function dateBuilder(d) {
     let month = months[d.getMonth()];
     let year = d.getFullYear();
 
-    return `${day} ${date} ${month} ${year}`;
+    return `${day} ${date} ${month} ${year}``;
 }
