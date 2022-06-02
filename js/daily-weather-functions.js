@@ -93,4 +93,4 @@ function createDayFive(filtered) {
                          Wind: ${filtered.wind} <br>
                          Pressure: ${filtered.pressure} <br></p>
   </div>
-</div>`)
+</div>`)}
