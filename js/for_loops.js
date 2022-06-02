@@ -25,7 +25,7 @@ function numberOddOrEven(){
         }
     }
 }
-//initially kept loopping becuase I put i > 9...browser kept locking up
+//initially kept looping because I put i > 9...browser kept locking up
 
 numberOddOrEven();
 
