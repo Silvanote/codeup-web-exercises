@@ -64,7 +64,7 @@ function oldLooping (){
 oldLooping();
 
 function newLooping(){
-    for(let loop of loops);{
+    for(let loop of newLoop){
         console.log(loop)
     }
 }
