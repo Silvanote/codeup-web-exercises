@@ -39,11 +39,29 @@ const users = [
 ];
 
 let filterusers = users.filter((el) => {
-    return el.languages.length >= 3;
+    el.languages.length >= 3;
 })
 console.log(filterusers)
 
-let mapuser = users.map((ele) =>{
+let mapusers = users.map(({email}) =>{
     return el.map
 })
 
+console.log(mapusers);
+
+let totals = users.reduce((total, user) => $`{total} user.yearsOfExperience`, 0);
+
+console.log(totals / users.length);
+
+let yearsavg = users.reduce((avg, user) => `user.yearsOfExperience / users.length`, 0);
+console.log(yearsavg);
+
+let emailbiggest = users.reduce((email, user) => {
+    if (email.length > user.email.length) {
+        return email;
+    } else {
+        return user.email;
+    }
+}, users[0]);
+
+console.log (yearsavg);
