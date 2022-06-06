@@ -1,6 +1,6 @@
 "use strict"
 
-fetch(url, {headers: {'Authorization': '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'}})
+fetch(url, {headers: {'Authorization': 'GITHUB_TOKEN'}})
 
 // Create a function that accepts a GitHub username, and returns a promise that resolves returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
 // Octokit.js
@@ -13,7 +13,7 @@ fetch(url, {headers: {'Authorization': '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
 
 
 const octokit = new Octokit({
-    auth: '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'
+    auth: 'GITHUB_TOKEN'
 })
 
 await octokit.request('GET /users/{Silvanote}/received_events', {
