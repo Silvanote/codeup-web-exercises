@@ -35,7 +35,7 @@ const codeBlocker = () => {
     })
     return Promise.resolve().then(v => {
         let i = 0;
-        whilte(i < 1000000000)
+        while(i < 1000000000)
         {
             i++;
         }
