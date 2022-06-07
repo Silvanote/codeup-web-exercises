@@ -274,7 +274,7 @@ function pullLetters (accepts){
     obj.string = str;
     obj.size = str.length;
     obj.isOneWord = str.indexOf(" ") < 0;
-    let lc =
+    let lc = somenumbers
 }
 
 //Actual solution
@@ -294,3 +294,9 @@ function makeObjectFromString(str){
 }
 console.log(makeObjectFromString("tacocat"));
     console.log(makeObjectFromString("John Jacob"));
+// June 7
+
+let URL = "https://quotes.rest/qod"
+
+fetch("https://quotes.rest/qod").then(res => res.json())
+
