@@ -298,8 +298,5 @@ console.log(makeObjectFromString("tacocat"));
 
 let URL = "https://quotes.rest/qod"
 
-fetch(url, {headers: {'Authorization': `token ${GITHUB_TOKEN}`}})
-    .then(res => res.json())
-    .then(results => results[0])
-    .then(firstEvent => console.log(firstEvent))
+fetch("https://quotes.rest/qod").then(res => res.json())
 
