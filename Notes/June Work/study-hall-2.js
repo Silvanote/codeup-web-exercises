@@ -77,3 +77,11 @@ var obj = {
 };
 
 console.log(obj.key);
+
+function keepOnMultiplying () {
+    let num = 1;
+    while (num <= 65537) {
+        num*=2;
+        console.log(num);
+    }
+}
